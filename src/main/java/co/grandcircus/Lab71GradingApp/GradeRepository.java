@@ -12,9 +12,3 @@ public interface GradeRepository extends MongoRepository<Grade, String>{
 	List<Grade> findByType(String type);
 	List<Grade> findByScore(double score);
 }
-//
-//private String id;
-//private String name;
-//private String type;
-//private double score;
-//private double total;

@@ -14,12 +14,14 @@
 <h1>Homepage</h1>
 <h2>This is a test</h2>
 <table class=table>
+
 <thead>
 	<tr>
 	<th>Name</th>
 	<th>Type</th>
 	<th>Score</th>
 	<th>Total</th>
+	<th>Delete</th>
 	</tr>
 </thead>
 <tbody>
@@ -27,12 +29,14 @@
 <tr><td>${grades.name}</td>
 <td>${grades.type}</td>
 <td>${grades.score}</td>
-<td>${grades.total}</td></tr>
+<td>${grades.total}</td>
+<td><a href="/deleteGrade?id=${grades.id}">Delete Grade</a></td></tr>
 </c:forEach>
+
 </tbody>
 
 <tr></tr>
 </table>
-	 
+	    <button class="btn"><a href="/addGrade" class="button">Add Grade</a></button>
 </body>
 </html>
