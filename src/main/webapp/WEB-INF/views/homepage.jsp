@@ -11,8 +11,11 @@
 
 </head>
 <body>
-<h1>Homepage</h1>
-<h2>This is a test</h2>
+<h1>Grades</h1>
+   <c:set var = "count" value = "${count}"/>
+      <c:if test = "${count < 1}">
+         <p>Grades is empty!<p>
+      </c:if>
 <table class=table>
 
 <thead>
@@ -22,14 +25,16 @@
 	<th>Score</th>
 	<th>Total</th>
 	<th>Delete</th>
+	
 	</tr>
 </thead>
 <tbody>
 <c:forEach var="grades" items="${grades}">
 <tr><td>${grades.name}</td>
 <td>${grades.type}</td>
-<td>${grades.score}</td>
-<td>${grades.total}</td>
+<td><fmt:formatNumber value="${grades.score}" pattern="###.0"/></td>
+<td><fmt:formatNumber value="${grades.total}" pattern="###.0"/></td>
+
 <td><a href="/deleteGrade?id=${grades.id}">Delete Grade</a></td></tr>
 </c:forEach>
 

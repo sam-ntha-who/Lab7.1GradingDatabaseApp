@@ -23,6 +23,8 @@ public class GradeController {
 	@RequestMapping("homepage")	
 	public String showHomepage(Model model) {
 		List<Grade> grades = repo.findAll();
+		int count = (int) repo.count();
+		model.addAttribute("count", count);
 		model.addAttribute("grades", grades);
 		return "homepage";	
 }

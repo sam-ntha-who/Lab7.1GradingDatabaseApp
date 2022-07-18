@@ -9,13 +9,13 @@
 <title>Add Grade</title>
 </head>
 <body>
-<h1>Add Grade</h1>
-<h2>This is a test</h2>
+<h1>Add A Grade</h1>
+
 
 <form class="form" action="/confirmGrade" method="post">
        <input type="hidden" value="${grades.id}"/>
         <table>
-        
+       
        		
        		<tr><td>Assignment Name: </td><td><input type="text" value="${grades.name}" name="name" placeholder="${grades.name}"/></td></tr>
        		<tr><td>Assignment Type: </td><td><input type="text" value="${grades.type}" name="type" placeholder="${grades.type}"/></td></tr>

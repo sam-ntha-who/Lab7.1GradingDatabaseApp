@@ -9,13 +9,13 @@
 <title>Confirm Grade</title>
 </head>
 <body>
-<h1>Confirm Grade</h1>
-<h2>this is a test</h2>
+<h1>Grade Confirmation</h1>
+<h2>This grade will be added to the database</h2>
 
 <p>Assignment Name: <c:out value="${name}"></c:out></p>
-<p>Assignment Type: <c:out value="${type}"></c:out></p>
-<p>Assignment Score: <c:out value="${score}"></c:out></p>
-<p>Assignment Total: <c:out value="${total}"></c:out></p>
+<p>Assignment Type: ${type}</p>
+<p>Assignment Score: <fmt:formatNumber value="${score}" pattern="###.0"/></p>
+<p>Assignment Total: <fmt:formatNumber value="${total}" pattern="###.0"/></p>
 
 <p><button class="btn"><a href="/" class="button">Back to Grades</a></button></p>
 
